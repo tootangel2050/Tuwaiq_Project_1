@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Online Food Recipes</title>
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+ 
+  <script src="Storage.js"></script>
+<link rel="stylesheet" href="StorageStyle.css">
+</head>
+
+<body onload="doShowAll()">
+ <link rel="stylesheet" href="/Login.html">
+  <button type="button" class="btn btn-primary btn-lg"><B>Login</B></button>
+
+  <header class="header">
+  <div class="container header__top">
+    <div class="header__logo">
+      <h1 class="header__title">
+        Food Recipes
+        <span class="header__subtitle">by Taghreed </span>
+      </h1>
+    </div>
+    
+  <div class="header__main">
+    <p class="display-title text-light">
+      Learn to cook with us!
+    </p>
+  </div>
+  
+</header>
+<main class="container page-content">
+  <h2 class="page-title">Online Recipes</h2>
+  <div class="grid" id="grid">
+    <div class="card">
+      <img src="images/111.jpg"  class="card__image" alt="">
+      <div class="card__info">
+        <form name=Foods>
+<p><B>The ingredients:</B>
+
+    Half a kilo of minced meat.
+    
+    Medium sized onion.
+    
+    amount of garlic.
+    
+    2 tablespoons of flour.
+    
+    A cup of rusk.
+    
+    spoon of salt.
+    
+    spoon of black pepper.
+    
+    an egg.<br><br>
+    <B> How to prepare:</B>
+
+    The meat is finely chopped, as well as the onions, then put together in the kibbeh, and they are mixed well.
+    
+    Add the flour, breadcrumbs, salt and black pepper to the mixture, and mix well.
+    
+    Put a beaten egg on the mixture, and mix them well.
+    
+    The ingredients are placed in a plastic bag, kept in the refrigerator, and left for at least 3 hours.
+    
+    - We take out the dough, and it is straightened and cut to the appropriate size, then the burger is formed into medium-sized circles.
+    
+    The hamburger discs are placed in the refrigerator, and each disc is separated from the other with a plastic bag.
+    
+    - The burger is taken out of the refrigerator before use and then fried in oil or on the grill.
+    
+    - Placed in a serving dish, or placed in bread greased with ketchup and mayonnaise, with the addition of lettuce, tomato slices and cucumber.
+</p>
+            <div id="PlayArea">
+                <table>
+                    <tr>
+    
+                        <td><b>Item:</b><input type=text name=name></td>
+                        <td><b>Details:</b><input type=text name=data></td>
+                        
+    
+                    </tr>
+    
+                    <tr>
+                        <td>
+                            <input type=button value="Save" onclick="SaveItem()"> 
+                           
+
+                          </td>
+                    </tr>
+                </table>
+            </div>
+    
+            <div id="items_table">
+                <h2></h2>
+                <table id=list></table>
+
+            </div>
+      
+            
+            <br><br>
+        
+      </div>
+    </div>
+  </div>
+ 
+
+
+  </div>
+</main>
+
+  
+</footer>
+<script src="js/app.js"></script>
+<script >
+
+function SaveItem() {
+	var name = document.forms.Foods.name.value;
+	var data = document.forms.Foods.data.value;
+	localStorage.setItem(name, data);
+	doShowAll();
+	
+}
+
+
+function doShowAll() {
+	if (CheckBrowser()) {
+		var key = "";
+		var list = "<tr><th>Foods</th><th>Content</th></tr>\n";
+		var i = 0;
+		for (i = 0; i <= localStorage.length - 1; i++) {
+			key = localStorage.key(i);
+			list += "<tr><td>" + key + "</td>\n<td>"
+					+ localStorage.getItem(key) + "</td></tr>\n";
+		}
+		if (list == "<tr><th>Name</th><th>Value</th></tr>\n") {
+			list += "<tr><td><i>empty</i></td>\n<td><i>empty</i></td></tr>\n";
+		}
+		document.getElementById('list').innerHTML = list;
+        
+	} else {
+		alert('Cannot store Foods as your browser do not support local storage');
+	}
+}
+
+</script>
+
+
+
+</body>
+</html>

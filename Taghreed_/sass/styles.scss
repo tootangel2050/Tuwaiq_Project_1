@@ -35,7 +35,7 @@ body {
   padding: 0 1em;
   background-color: #fff;
 
-  @media (min-width: 900px) {
+  @media (min-width: 250px) {
     padding: 0;
   }
 }
@@ -61,7 +61,7 @@ button {
 
 img {
   display: block;
-  width: 100%;
+  width: 50%;
   height: auto;
 }
 
@@ -71,7 +71,7 @@ img {
   text-align: center;
   letter-spacing: 1.3px;
 
-  @media (min-width: 600px) {
+  @media (min-width: 250px) {
     font-size: 3rem;
   }
 }
@@ -80,7 +80,7 @@ img {
   text-align: center;
   font-weight: 700;
 
-  @media (min-width: 600px) {
+  @media (min-width: 250px) {
     font-size: 2rem;
     font-weight: 300;
   }
@@ -276,11 +276,7 @@ img {
         $gradient-lighter-color,
         $gradient-darker-color
       ),
-    url(../images/najran.jpg);
-    background-size: cover;
-    background-position: top;
-    background-repeat: no-repeat;
-    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+    
   }
 }
 
@@ -387,4 +383,14 @@ img {
     transform: scale(1);
     animation-timing-function: ease-in;
   }
+}
+
+.hideRecipe
+{
+  display: none;
+}
+
+.showRecipe
+{
+  display: block;
 }

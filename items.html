@@ -16,40 +16,80 @@
 
   <script src="Storage.js"></script>
   <link rel="stylesheet" href="StorageStyle.css">
+  <style>
+.center {
+  margin: auto;
+  width: 60%;
+  border: 3px solid #73AD21;
+  padding: 10px;
+}
+</style>
 </head>
 
 <body>
   <div style="width: 100%;">
     <div class="row g-0">
-      <div class="col-md-4">
+<table border="1" width="100%">
+	<tr>
+	<h5 align="center" class="card-title"></h5>
+		<td align="center"><p><B>ingredients:</B></p>
+          <p class="card-text" id="items-ingredients">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </td>
+	</tr>
+	<tr>
+		<td align="center">
+        		
+		<div class="col-md-4">
         <img class="img-fluid rounded-start" alt="...">
-      </div>
+        </div>
+	    </td>
+	</tr>
+	<tr>
+		<td align="center">
+		<p><B>steps:</B></p>
+        <p class="card-text" id="items-steps"><small class="text-muted">Last updated 3 mins ago</small></p>
+		</td>
+	    </tr>
+</table>
+<!--	  <div class="col-md-4">
+        <img class="img-fluid rounded-start" alt="...">
+      </div>-->
        <div class="col-md-8">
         <div class="card-body">
-          <h5 class="card-title"></h5>
-          <p><B>ingredients:</B></p>
+          <!--<h5 class="card-title"></h5>-->
+          
+<!--		  
+		  <p><B>ingredients:</B></p>
           <p class="card-text" id="items-ingredients">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          <p><B>steps:</B></p>
-          <p class="card-text" id="items-steps"><small class="text-muted">Last updated 3 mins ago</small></p>
-        </div>
+          
+		  
+		  <p><B>steps:</B></p>
+          <p class="card-text" id="items-steps"><small class="text-muted">Last updated 3 mins ago</small></p>-->
+        
+		</div>
       </div> 
   </div>
     </div>
+<div class="center">	
   <div class="row">
-    <div class="col-9">
-        <div class="form-floating">
+    <div align="center" class="col-9">
+        <div >
           <textarea  class="form-control" placeholder="Leave a comment here"
-                style=" height:60px; font-size: 20px;" id="textarea"></textarea>
+                style=" height:110px;  font-size: 20px;" id="textarea"></textarea>
         </div>
     </div>
-    <div class="col-3">
+	
+    <div class="col-2">
         <div class="d-grid gap-2 d-md-block">
-            <button class="btn btn-primary" type="button" id="comment">Comment here</button>
+            <button class="btn btn-primary" type="button" id="comment">Comment</button>
+			<p></p>
+			<a href='index.html'><button class="btn btn-primary" id="toggle-cart-btn">Back Home</button></a>
         </div>
     </div>
 <div class="row">
-    <div class="col" id="userComment">
-    </div>
+    <div class="col" id="userComment"></div>
+</div>
+</div>
 </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="js/details.js"></script>

@@ -19,7 +19,7 @@ body {
   max-width: 992px;
   margin: 0 auto;
   padding: 0 1em;
-  background-color: rgba(218, 215, 250, 0.842); }
+  background-color: rgb(255,255, 255); }
   @media (min-width: 250px) {
     .container {
       padding: 0; } }
@@ -102,6 +102,7 @@ img {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-column-gap: 1em;
   grid-row-gap: 2em; }
+  
 
 .header .arrow {
   width: 50px;
@@ -134,7 +135,8 @@ img {
   transform: scale(0);
   transform: translatey(-10px);
   opacity: 0;
-  pointer-events: none; }
+  pointer-events: none; 
+  }
   .header .header__cart .header__submenu .shopping-cart-container.open {
     animation: fade-down 0.3s forwards;
     pointer-events: auto; }
@@ -222,7 +224,9 @@ img {
 .header .header__title {
   font-family: "Rammetto One", cursive;
   font-size: 2rem;
-  color: #ea332a; }
+  color: #ea332a; 
+
+  }
 
 .header .header__subtitle {
   font-size: 1.2rem;
@@ -232,11 +236,11 @@ img {
   margin-left: 20px; }
 
 .header .header__main {
-  height: 95vh;
+  height: 35vh;
   display: flex;
   justify-content: center;
-  align-items: center;
-  background-image:url(../images/22222.jpg);
+  align-items: right;
+  /*background-image:url(../images/2222.jpg)*/;
   background-size: cover;
   background-repeat: no-repeat;
   clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%); }
